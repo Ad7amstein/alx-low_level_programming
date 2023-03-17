@@ -2,7 +2,7 @@
 /**
  * main - Entry point
  *
- * Description: A C program that
+ * Description: A C program that print digits
  *
  * Return: int - 0(Success)
  */
