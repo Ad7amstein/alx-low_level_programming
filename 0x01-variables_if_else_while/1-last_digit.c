@@ -2,12 +2,12 @@
 #include <time.h>
 #include <stdio.h>
 /**
- * @brief main - Entry point
+ * main - Entry point
  *
  * Description: A C program that prints the last digit
  *  of the number stored in the variable n
  *
- * @return int
+ * Return: int - 0(Success)
  */
 int main(void)
 {
