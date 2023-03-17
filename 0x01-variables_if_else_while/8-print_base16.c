@@ -2,7 +2,7 @@
 /**
  * main - Entry point
  *
- * Description: A C program that prints 
+ * Description: A C program that prints
  * all the numbers of base 16 in lowercase
  *
  * Return: int - 0(Success)
