@@ -3,7 +3,7 @@
  * main - Entry point
  *
  * Description: A C program that prints
- * all possible combinations of two-digit numbers
+ * all possible combinations of three-digit numbers
  *
  * Return: int - 0(Success)
  */
