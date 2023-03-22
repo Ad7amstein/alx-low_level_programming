@@ -9,9 +9,9 @@ void jack_bauer(void)
 {
 int hour, minute;
 hour = 0;
-minute = 0;
 while (hour < 24)
 {
+minute = 0;
 while (minute < 60)
 {
 _putchar((hour / 10) + '0');
