@@ -11,7 +11,7 @@ int i;
 i = n;
 while (i != 98)
 {
-pirntf("%d, ", i);
+printf("%d, ", i);
 if (i > 98)
 i--;
 else
