@@ -15,7 +15,7 @@ while (c < 10)
 {
 _putchar(',');
 _putchar(' ');
-n = r * c;
+n = r *c;
 if (n < 10)
 {
 _putchar(' ');
