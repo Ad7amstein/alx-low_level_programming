@@ -4,7 +4,7 @@
  * value of the given number
  *
  * @n: checks input of function
- * 
+ *
  * Return: the absulte value of the given number
  *
  */
