@@ -7,10 +7,10 @@ void times_table(void)
 {
 int r, c, n;
 r = 0;
-c = 1;
 while (r < 10)
 {
 _putchar('0' + 0);
+c = 1;
 while (c < 10)
 {
 _putchar(',');
