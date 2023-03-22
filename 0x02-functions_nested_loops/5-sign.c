@@ -5,7 +5,7 @@
  *            if the given number is positive
  *            or negative or zero
  *
- * @c: checks input of function
+ * @n: checks input of function
  *
  * Return: return 1 if n is positive
  *         return 0 if n is 0
