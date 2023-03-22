@@ -14,10 +14,10 @@ while (hour < 24)
 {
 while (minute < 60)
 {
-_putchar((hour / 0) + '0');
-_putchar((hour % 0) + '0');
-_putchar((minute / 0) + '0');
-_putchar((minute % 0) + '0');
+_putchar((hour / 10) + '0');
+_putchar((hour % 10) + '0');
+_putchar((minute / 10) + '0');
+_putchar((minute % 10) + '0');
 minute++;
 }
 hour++;
