@@ -10,25 +10,25 @@ r = 0;
 c = 1;
 while (r < 10)
 {
-    _putchar('0' + 0);
-    while (c < 10)
-    {
-        _putchar(',');
-        _putchar(' ');
-        n = r * c;
-        if (n < 10)
-        {
-            _putchar(' ');
-            _putchar('0' + (n % 10));
-        }
-        else
-        {
-            _putchar('0' + (n / 10));
-            _putchar('0' + (n % 10));
-        }
-        c++;
-    }
-    _putchar('\n');
-    r++;
+_putchar('0' + 0);
+while (c < 10)
+{
+_putchar(',');
+_putchar(' ');
+n = r * c;
+if (n < 10)
+{
+_putchar(' ');
+_putchar('0' + (n % 10));
+}
+else
+{
+_putchar('0' + (n / 10));
+_putchar('0' + (n % 10));
+}
+c++;
+}
+_putchar('\n');
+r++;
 }
 }
