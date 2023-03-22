@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_to_98 - program  that prints 
+ * print_to_98 - program  that prints
  * all natural numbers from n to 98
  *
  * @n: the starting number
