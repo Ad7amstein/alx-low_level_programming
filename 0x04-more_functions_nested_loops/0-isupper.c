@@ -4,8 +4,7 @@
  *
  * @c: check input of the function
  *
- * Returns 1 if c is uppercase
- * Returns 0 otherwise
+ * Return: int - 1 if c is uppercase, 0 otherwise
  */
 
 int _isupper(int c)
