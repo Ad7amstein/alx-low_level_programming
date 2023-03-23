@@ -24,5 +24,6 @@ printf("%d", i);
 if (i != 100)
 _putchar(' ');
 }
+_putchar('\n');
 return (1);
 }
