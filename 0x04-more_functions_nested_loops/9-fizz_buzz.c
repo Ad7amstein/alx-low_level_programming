@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 /**
  * main - program that prints the numbers from 1 to 100,
  * followed by a new line.
@@ -6,7 +6,7 @@
  * and for the multiples of five print Buzz.
  * For numbers which are multiples of both three and five print FizzBuzz.
  *
- * Return: int
+ * Return: Always (0)
  */
 int main(void)
 {
@@ -25,5 +25,5 @@ if (i != 100)
 _putchar(' ');
 }
 _putchar('\n');
-return (1);
+return (0);
 }
