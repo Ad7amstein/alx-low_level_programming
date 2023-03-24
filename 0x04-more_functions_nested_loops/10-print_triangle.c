@@ -4,7 +4,7 @@
  * followed by a new line.
  *
  * @size: size of the triangle
- * 
+ *
  * Return: no return value
  */
 void print_triangle(int size)
