@@ -13,7 +13,7 @@
 int main(void)
 {
 long int n = 612852475143;
-long int i;
+int i;
 
 while (n % 2 == 0)
 {
@@ -29,7 +29,7 @@ n /= i;
 }
 
 if (n > 2)
-printf("%ld\n", n);
+printf("%d\n", n);
 
 return (0);
 }
