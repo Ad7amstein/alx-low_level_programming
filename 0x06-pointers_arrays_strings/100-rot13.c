@@ -7,32 +7,24 @@
  */
 char *rot13(char *str)
 {
-int i, n;
+char in[] =  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+char out[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+int i, j;
 i = 0;
 while (str[i])
 {
-if (!isalpha(str[i]))
+j = 0;
+while (in[j])
 {
-i++;
-continue;
+if (in[j] == str[i])
+{
+str[i] = out[j];
+break;
 }
-
-n = str[i];
-if (isupper(str[i]))
-n = str[i] - 'A';
-else if (islower(str[i]))
-n = str[i] - 'a';
-
-n += 13;
-n %= 26;
-
-if (isupper(str[i]))
-n += 'A';
-else if (islower(str[i]))
-n += 'a';
-
-str[i] = n;
+j++;
+}
 i++;
 }
+
 return (str);
 }
