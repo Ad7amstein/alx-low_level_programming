@@ -4,6 +4,7 @@
  * all lowercase letters
  * of a string to uppercase.
  *
+ * @str: array of characters
  * Return: pointer to char (char*)
  */
 char *string_toupper(char *str)
