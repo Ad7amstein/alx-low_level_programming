@@ -16,5 +16,5 @@ if (s1[i] == '\0')
 return 0;
 i++;
 }
-return s1[i] - s2[i];
+return (s1[i] - s2[i]);
 }
