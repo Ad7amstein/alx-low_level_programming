@@ -2,7 +2,7 @@
 /**
  * is_prime - check if the number is prime
  *
- * @param n: int
+ * @n: int
  * @i: int
  * Return: int
  */
