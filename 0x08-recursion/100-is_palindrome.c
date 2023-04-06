@@ -4,6 +4,7 @@
  *
  * @s: char*
  * @i: int
+ * @n: int
  * Return: int
  */
 int check(char *s, int n, int i)
