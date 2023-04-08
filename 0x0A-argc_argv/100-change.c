@@ -10,7 +10,8 @@
  */
 int main(int argc, char *argv[])
 {
-	int num, ncoins;
+	int num, ncoins, i;
+	int cents[5] = {25, 10, 5, 2, 1};
 
 	if (argc != 2)
 	{
@@ -21,18 +22,15 @@ int main(int argc, char *argv[])
 	num = atoi(argv[1]);
 	ncoins = 0;
 	if (num < 0)
+	{
 		printf("%d\n", ncoins);
-
-	ncoins += num / 25;
-	num %= 25;
-	ncoins += num / 10;
-	num %= 10;
-	ncoins += num / 5;
-	num %= 5;
-	ncoins += num / 2;
-	num %= 2;
-	ncoins += num / 1;
-	num %= 1;
+		return (0);
+	}
+	for (i = 0; i < 5; ++i)
+	{
+		ncoins += num / cents[i];
+		num %= cents[i];
+	}
 	printf("%d\n", ncoins);
 	return (0);
 }
