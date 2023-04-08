@@ -5,7 +5,7 @@
  *
  * @argc: argument count (int)
  * @argv: command line arguments (char*)
- * Return: Always (0) int
+ * Return: Success (0) - Failed (1)
  */
 int main(int argc, char *argv[])
 {
