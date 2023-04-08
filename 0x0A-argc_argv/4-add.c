@@ -5,21 +5,26 @@
  *
  * @argc: argument count (int)
  * @argv: command line arguments (char*)
- * Return: Always (0) int
+ * Return: Success (0) - Failed (1) - (int)
  */
 int main(int argc, char *argv[])
 {
-	int res, i, x;
+	int res, i, x, j;
 
 	res = 0;
 	i = 1;
 	while (i < argc)
 	{
 		x = atoi(argv[i]);
-		if (x == 0 && *argv[i] != '0')
+		j = 0;
+		while (argv[i][j])
 		{
-			printf("Error\n");
-			return (1);
+			if (argv[i][j] < '0' || argv[i][j] > '9')
+			{
+				printf("Error\n");
+				return (1);
+			}
+			j++;
 		}
 		res += x;
 		i++;
