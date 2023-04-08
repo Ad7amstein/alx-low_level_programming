@@ -6,7 +6,7 @@
  *
  * @argc: argument count (int)
  * @argv: command line arguments (char*)
- * Return: Always (0) int
+ * Return: Success (0) - Failed (1)
  */
 int main(int argc, char *argv[])
 {
@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 	num = atoi(argv[1]);
 	ncoins = 0;
 	if (num < 0)
-		printf("%d\n", 0);
+		printf("%d\n", ncoins);
 
 	ncoins += num / 25;
 	num %= 25;
