@@ -1,25 +1,5 @@
 #include "main.h"
 /**
- * _strcmp - function that compares two strings.
- *
- * @s1: first string
- * @s2: second string
- * Return: int
- */
-int _strcmp(char *s1, char *s2)
-{
-	int i;
-	i = 0;
-	while (s1[i] == s2[i])
-	{
-		if (s1[i] == '\0')
-			return (0);
-		i++;
-	}
-	return (s1[i] - s2[i]);
-}
-
-/**
  * **strtow - function that splits a string into words.
  *
  * @str: string
@@ -33,7 +13,7 @@ char **strtow(char *str)
 	i = 0;
 	j = 0;
 	nwords = 0;
-	if (_strcmp(str, "") == 0 || str == NULL)
+	if (_strcmp(str, "") == 0 || _strcmp(str, " ") == 0 || str == NULL)
 		return (NULL);
 
 	while (str[i])
