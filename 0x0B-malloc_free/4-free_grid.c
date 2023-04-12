@@ -5,7 +5,7 @@
  *
  * @grid: 2d grid to be freed
  * @height: grid height
- * 
+ *
  * Return: void
  */
 void free_grid(int **grid, int height)
