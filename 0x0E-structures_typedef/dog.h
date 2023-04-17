@@ -3,11 +3,12 @@
  * @name: dog name
  * @age: dog age
  * @owner: dog owner
+ *
  * Description: dog type has name, and owner
  */
-struct dog
+typedef struct dog
 {
 	char *name;
 	float age;
 	char *owner;
-};
+} dog;
