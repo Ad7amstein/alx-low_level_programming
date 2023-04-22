@@ -12,7 +12,7 @@ int op_add(int a, int b)
 }
 
 /**
- * op_add - subtract two numbers
+ * op_sub - subtract two numbers
  *
  * @a: first number
  * @b: second number
@@ -24,7 +24,7 @@ int op_sub(int a, int b)
 }
 
 /**
- * op_add - multiply two numbers
+ * op_mul - multiply two numbers
  *
  * @a: first number
  * @b: second number
@@ -36,7 +36,7 @@ int op_mul(int a, int b)
 }
 
 /**
- * op_add - divide two numbers
+ * op_div - divide two numbers
  *
  * @a: first number
  * @b: second number
@@ -53,7 +53,7 @@ int op_div(int a, int b)
 }
 
 /**
- * op_add - modulo two numbers
+ * op_mod - modulo two numbers
  *
  * @a: first number
  * @b: second number
