@@ -8,59 +8,54 @@
 void print_all(const char *const format, ...)
 {
 	va_list args;
-	int j, k, i, ok;
-	char c;
-	float f;
+	int i, ok;
 	char *s;
-	char types[] = {'c', 'i', 'f', 's'};
+	char c;
 
 	va_start(args, format);
-	j = 0;
-	while (format[j])
+	i = 0;
+	while (format && format[i])
 	{
-		k = 0;
-		while (types[k])
+		ok = 1;
+		switch (format[i])
 		{
-			ok = 0;
-			if (format[j] == types[k])
+		case 'c':
+			c = va_arg(args, int);
+			printf("%c", c);
+			break;
+
+		case 'i':
+			printf("%d", va_arg(args, int));
+			break;
+
+		case 'f':
+			printf("%f", va_arg(args, double));
+			break;
+
+		case 's':
+			s = va_arg(args, char *);
+			if (s == NULL)
 			{
-				if (format[j] == 'c')
-				{
-					c = (char)va_arg(args, int);
-					printf("%c", c);
-				}
-				else if (format[j] == 'i')
-				{
-					i = va_arg(args, int);
-					printf("%d", i);
-				}
-				else if (format[j] == 'f')
-				{
-					f = (float)va_arg(args, double);
-					printf("%f", f);
-				}
-				else if (format[j] == 's')
-				{
-					s = va_arg(args, char *);
-					if (s == NULL)
-					{
-						printf("(nil)");
-					}
-					else if (s)
-					{
-						printf("%s", s);
-					}
-				}
-				ok = 1;
-				break;
+				printf("(nil)");
 			}
-			k++;
+			else
+			{
+				printf("%s", s);
+			}
+			break;
+
+		default:
+			ok = 0;
+			break;
 		}
 
-		if (format[j + 1] && ok)
+		i++;
+		if (format[i] && ok)
+		{
 			printf(", ");
-		j++;
+		}
 	}
-	va_end(args);
+
 	printf("\n");
+	va_end(args);
 }
