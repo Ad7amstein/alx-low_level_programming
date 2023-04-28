@@ -2,14 +2,13 @@
 /**
  * print_list - function that prints all the elements of a list_t list
  *
- * @h: list to be printed
- * Return: size_t
+ * @h: pointer to the first node
+ * Return: size of list
  */
 size_t print_list(const list_t *h)
 {
-	size_t n_nodes;
+	size_t n_nodes = 0;
 
-	n_nodes = 0;
 	while (h)
 	{
 		if (h->str != NULL)
