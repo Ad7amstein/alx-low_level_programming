@@ -11,7 +11,6 @@
 int main(void)
 {
 	listint_t *head;
-	int sum;
 
 	head = NULL;
 	add_nodeint_end(&head, 0);
@@ -22,8 +21,48 @@ int main(void)
 	add_nodeint_end(&head, 98);
 	add_nodeint_end(&head, 402);
 	add_nodeint_end(&head, 1024);
-	sum = sum_listint(head);
-	printf("sum = %d\n", sum);
-	free_listint2(&head);
+	print_listint(head);
+	printf("-----------------\n");
+	delete_nodeint_at_index(&head, 5);
+	print_listint(head);
+	printf("-----------------\n");
+	delete_nodeint_at_index(&head, 0);
+	print_listint(head);
+	printf("-----------------\n");
+	delete_nodeint_at_index(&head, 0);
+	print_listint(head);
+	printf("-----------------\n");
+	delete_nodeint_at_index(&head, 0);
+	print_listint(head);
+	printf("-----------------\n");
+	delete_nodeint_at_index(&head, 0);
+	print_listint(head);
+	printf("-----------------\n");
+	delete_nodeint_at_index(&head, 0);
+	print_listint(head);
+	printf("-----------------\n");
+	delete_nodeint_at_index(&head, 0);
+	print_listint(head);
+	printf("-----------------\n");
+	delete_nodeint_at_index(&head, 0);
+	printf("-----------------\n");
+	delete_nodeint_at_index(&head, 0);
+	printf("-----------------\n");
+	delete_nodeint_at_index(&head, 0);
+	printf("-----------------\n");
+	delete_nodeint_at_index(&head, 0);
+	printf("-----------------\n");
+	delete_nodeint_at_index(&head, 0);
+	printf("-----------------\n");
+	delete_nodeint_at_index(&head, 0);
+	printf("-----------------\n");
+	delete_nodeint_at_index(&head, 0);
+	printf("-----------------\n");
+	delete_nodeint_at_index(&head, 0);
+	printf("-----------------\n");
+	delete_nodeint_at_index(&head, 0);
+	printf("-----------------\n");
+	delete_nodeint_at_index(&head, 0);
+	print_listint(head);
 	return (0);
 }
