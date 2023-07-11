@@ -46,15 +46,16 @@ int is_valid(int n, char *s)
  */
 int main(int argc, char *argv[])
 {
-	int fp_from = open(argv[1], O_RDONLY),
-	    fp_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	int fp_from, fp_to;
 	ssize_t bytes_read, bytes_written;
 	char buf[BUFFER_SIZE];
 
 	if (!is_valid_args(argc))
 		exit(97);
+	fp_from = open(argv[1], O_RDONLY);
 	if (!is_valid(fp_from, argv[1]))
 		return (98);
+	fp_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (fp_to == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
@@ -69,11 +70,8 @@ int main(int argc, char *argv[])
 			exit(99);
 		}
 	}
-	if (bytes_read == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+	if (!is_valid(bytes_read, argv[1]))
 		exit(98);
-	}
 	if (close(fp_from) == -1 || close(fp_to) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n",
