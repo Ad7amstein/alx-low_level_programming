@@ -76,7 +76,7 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	if (close(fp_from) == -1 || close(fp_to))
+	if (close(fp_from) == -1 || close(fp_to) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n",
 			(close(fp_to) == -1 ? fp_to : fp_from));
