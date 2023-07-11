@@ -26,7 +26,8 @@ int is_valid_args(int argc)
 /**
  * is_valid - check helper
  *
- * @argc: number of args
+ * @n: status
+ * @s: filename
  * Return: int
  */
 int is_valid(int n, char *s)
