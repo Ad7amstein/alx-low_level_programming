@@ -8,22 +8,6 @@
 #define BUFFER_SIZE 1024
 
 /**
- * is_valid_args - checks number of arguments
- *
- * @argc: number of arguments
- * Return: 1 on success - 0 on failuer
- */
-int is_valid_args(int argc)
-{
-	if (argc != 3)
-	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-		return (0);
-	}
-	return (1);
-}
-
-/**
  * main - program that copies the content of a file to another file
  * @argc: number of arguments
  * @argv: array of arguments
@@ -35,10 +19,11 @@ int main(int argc, char *argv[])
 	int fp_from, fp_to;
 	ssize_t bytes_read, bytes_written;
 	char buf[BUFFER_SIZE];
-
-	if (!is_valid_args(argc))
-		exit(97);
-
+	if (argc != 3)
+	{
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		exit (97);
+	}
 	fp_from = open(argv[1], O_RDONLY);
 	if (fp_from == -1)
 	{
