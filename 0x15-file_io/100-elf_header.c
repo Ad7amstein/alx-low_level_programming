@@ -22,9 +22,11 @@ void print_error(const char *error_message)
  */
 void display_elf_header(const Elf64_Ehdr *elf_header)
 {
+	int i = 0;
+
 	printf("ELF Header:\n");
 	printf("  Magic:   ");
-	for (int i = 0; i < EI_NIDENT; i++)
+	for (; i < EI_NIDENT; i++)
 		printf("%02x ", elf_header->e_ident[i]);
 	printf("\n");
 
