@@ -7,6 +7,12 @@
 #include <string.h>
 #define BUFFER_SIZE 1024
 
+/**
+ * is_valid_args - checks number of arguments
+ *
+ * @argc: number of arguments
+ * Return: 1 on success - 0 on failuer
+ */
 int is_valid_args(int argc)
 {
 	if (argc != 3)
@@ -14,7 +20,7 @@ int is_valid_args(int argc)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		return (0);
 	}
-	return (0);
+	return (1);
 }
 
 /**
@@ -30,7 +36,7 @@ int main(int argc, char *argv[])
 	ssize_t bytes_read, bytes_written;
 	char buf[BUFFER_SIZE];
 
-	if (is_valid_args(argc))
+	if (!is_valid_args(argc))
 		exit(97);
 
 	fp_from = open(argv[1], O_RDONLY);
