@@ -22,8 +22,10 @@ void print_error(const char *error_message)
  */
 void display_elf_header(const Elf64_Ehdr *elf_header)
 {
+	int i = 0;
+
 	printf("Magic: ");
-	for (int i = 0; i < EI_NIDENT; i++)
+	for (; i < EI_NIDENT; i++)
 		printf("%02x ", elf_header->e_ident[i]);
 	printf("\n");
 
@@ -113,16 +115,16 @@ void display_elf_header(const Elf64_Ehdr *elf_header)
  */
 int main(int argc, char *argv[])
 {
-	int fd;
+	int file_descriptor;
 	ssize_t bytes_read;
 	Elf64_Ehdr elf_header;
 
 	if (argc != 2)
 		print_error("Usage: elf_header elf_filename");
-	fd = open(argv[1], O_RDONLY);
-	if (fd == -1)
+	file_descriptor = open(argv[1], O_RDONLY);
+	if (file_descriptor == -1)
 		print_error("Failed to open the file");
-	bytes_read = read(fd, &elf_header, sizeof(Elf64_Ehdr));
+	bytes_read = read(file_descriptor, &elf_header, sizeof(Elf64_Ehdr));
 	if (bytes_read == -1)
 		print_error("Failed to read the ELF header");
 	if (bytes_read != sizeof(Elf64_Ehdr))
