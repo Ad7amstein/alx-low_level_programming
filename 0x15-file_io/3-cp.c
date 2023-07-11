@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 	char buf[BUFFER_SIZE];
 
 	if (is_valid_args(argc))
-		exxit(97);
+		exit(97);
 
 	fp_from = open(argv[1], O_RDONLY);
 	if (fp_from == -1)
@@ -66,4 +66,5 @@ int main(int argc, char *argv[])
 			(close(fp_to) == -1 ? fp_to : fp_from));
 		exit(100);
 	}
+	return (0);
 }
