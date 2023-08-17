@@ -5,7 +5,7 @@
  *
  * @head: head node
  * @index: index to delete it's node
- * Returns: 1 if it succeeded, -1 if it failed
+ * Return: 1 if it succeeded, -1 if it failed
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
@@ -34,16 +34,13 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		if (i == index)
 		{
 			if (current->next == NULL)
-			{
 				current->prev->next = NULL;
-				free(current);
-			}
 			else
 			{
 				current->prev->next = current->next;
 				current->next->prev = current->prev;
-				free(current);
 			}
+			free(current);
 			return (1);
 		}
 		current = current->next;
