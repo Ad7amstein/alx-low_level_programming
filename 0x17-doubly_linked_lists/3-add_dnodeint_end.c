@@ -1,7 +1,13 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "lists.h"
-
+/**
+ * add_dnodeint_end - add node to the end of the list
+ *
+ * @head: head node
+ * @n: number to add
+ * Return: (dlistint_t*) pointer to new node
+ */
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
 	dlistint_t *new_node = NULL, *current = *head;
