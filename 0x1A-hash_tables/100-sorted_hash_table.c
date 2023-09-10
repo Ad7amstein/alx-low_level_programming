@@ -154,7 +154,7 @@ void insert_sorted(shash_table_t *ht, shash_node_t *node)
 }
 
 /**
- * hash_table_get - retrieves a value associated with a key
+ * shash_table_get - retrieves a value associated with a key
  *
  * @ht: the hash table
  * @key: key to be retrived
@@ -214,7 +214,7 @@ void shash_table_print(const shash_table_t *ht)
 
 /**
  * shash_table_print_rev - Prints the hash table in reverse order
- * 
+ *
  * @ht: The hash table to be printed
  */
 void shash_table_print_rev(const shash_table_t *ht)
